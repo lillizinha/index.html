@@ -2,63 +2,168 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brinquedo Interativo para Gatos</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fff8ee;
+            color: #5a463a;
+            padding: 0 15px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background: linear-gradient(90deg, #ffddb8, #ffcba4, #ffb98b);
+            color: #5a3e2e;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            background: #fffaf3;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        figure {
+            text-align: center;
+        }
+
+        figure img {
+            width: 300px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        figcaption {
+            margin-top: 8px;
+            font-style: italic;
+            color: #8a5a42;
+        }
+
+        h2 {
+            color: #8a5a42;
+            border-bottom: 3px solid #ffb98b;
+            padding-bottom: 6px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            padding: 0;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            background: #ffd4b3;
+            color: #5a3e2e;
+            font-weight: bold;
+            padding: 10px 18px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #ffbe8f;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 18px;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #5a3e2e;
+            border-top: 3px solid #ffb98b;
+            font-weight: bold;
+            background: #ffddb8;
+        }
+
+        @media (max-width: 768px) {
+            figure img {
+                width: 90%;
+            }
+
+            nav a {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>Brinquedo Interativo para Gatos</h1>
-    </header>
+<header>
+    <h1>Brinquedo Interativo para Gatos</h1>
+</header>
 
-    <main>
-        <figure>
-            <img src="https://images.unsplash.com/photo-1518715308788-300e1e1e1e1e?auto=format&fit=crop&w=400&q=80" alt="Brinquedo para gatos" width="250">
-            <figcaption>Brinquedo Interativo - Diversão e estímulo para seu gato</figcaption>
-        </figure>
+<main>
+    <figure>
+        <img src="https://images.unsplash.com/photo-1518715308788-300e1e1e1e1e?auto=format&fit=crop&w=400&q=80" alt="Brinquedo para gatos">
+        <figcaption>Brinquedo Interativo - Diversão e estímulo para seu gato</figcaption>
+    </figure>
 
-        <section>
-            <h2>Descrição do Produto</h2>
-            <p>
-                O <strong>Brinquedo Interativo para Gatos</strong> foi desenvolvido para estimular o instinto natural de caça dos felinos, proporcionando diversão, exercício e bem-estar. Com design atrativo e cores vibrantes, ele desperta a curiosidade do seu gato e ajuda a combater o estresse e o tédio.
-            </p>
-        </section>
+    <section>
+        <h2>Descrição do Produto</h2>
+        <p>
+            O <strong>Brinquedo Interativo para Gatos</strong> foi desenvolvido para estimular o instinto natural de caça dos felinos, proporcionando diversão, exercício e bem-estar. Com design atrativo e cores vibrantes, desperta a curiosidade do seu gato e ajuda a combater o estresse e o tédio.
+        </p>
+    </section>
 
-        <section>
-            <h2>Diferenciais</h2>
-            <ul>
-                <li><strong>Material resistente:</strong> Fabricado com plástico e tecido de alta durabilidade, seguro para o pet.</li>
-                <li><strong>Movimento interativo:</strong> Possui partes móveis que incentivam o gato a brincar e se exercitar.</li>
-                <li><strong>Ajuda na saúde:</strong> Estimula a atividade física, prevenindo obesidade e promovendo saúde mental.</li>
-                <li><strong>Fácil de limpar:</strong> Pode ser higienizado com pano úmido e sabão neutro.</li>
-                <li><strong>Indicado para todas as idades:</strong> Gatinhos e adultos se divertem igualmente.</li>
-            </ul>
-        </section>
+    <section>
+        <h2>Diferenciais</h2>
+        <ul>
+            <li><strong>Material resistente:</strong> Plástico e tecido de alta durabilidade, seguro para o pet.</li>
+            <li><strong>Movimento interativo:</strong> Partes móveis incentivam o gato a brincar e se exercitar.</li>
+            <li><strong>Ajuda na saúde:</strong> Estimula a atividade física, prevenindo obesidade e promovendo saúde mental.</li>
+            <li><strong>Fácil de limpar:</strong> Higienize com pano úmido e sabão neutro.</li>
+            <li><strong>Indicado para todas as idades:</strong> Gatinhos e adultos se divertem igualmente.</li>
+        </ul>
+    </section>
 
-        <section>
-            <h2>Modo de Uso</h2>
-            <p>
-                Apresente o brinquedo ao seu gato e incentive-o a interagir. Use petiscos ou catnip para aumentar o interesse, se desejar. Sempre supervisione o uso para garantir a segurança do animal.
-            </p>
-        </section>
+    <section>
+        <h2>Modo de Uso</h2>
+        <p>
+            Apresente o brinquedo ao seu gato e incentive-o a interagir. Use petiscos ou catnip para aumentar o interesse, se desejar. Sempre supervisione o uso para garantir a segurança do animal.
+        </p>
+    </section>
 
-        <section>
-            <h2>Indicação</h2>
-            <p>
-                Indicado para gatos de todas as idades e portes. Ideal para ambientes internos e para gatos que passam muito tempo sozinhos.
-            </p>
-        </section>
+    <section>
+        <h2>Indicação</h2>
+        <p>
+            Indicado para gatos de todas as idades e portes. Ideal para ambientes internos e para gatos que passam muito tempo sozinhos.
+        </p>
+    </section>
 
-        <nav>
-            <ul>
-                <li><a href="produtos.html">Voltar para os produtos</a></li>
-                <li><a href="indexx.html">Voltar para o indexx</a></li>
-            </ul>
-        </nav>
-    </main>
+    <nav>
+        <ul>
+            <li><a href="produtos.html">← Voltar para Produtos</a></li>
+            <li><a href="indexx.html">🏠 Voltar para o Início</a></li>
+        </ul>
+    </nav>
+</main>
 
-    <footer>
-        <p>&copy; 2025 Pet Shop Amigo Fiel. Todos os direitos reservados.</p>
-    </footer>
+<footer>
+    <p>&copy; 2025 Pet Shop Amigo Fiel. Todos os direitos reservados.</p>
+</footer>
 
 </body>
 </html>
