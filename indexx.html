@@ -1,122 +1,181 @@
-<!DOCTYPE html>
+
+        
+            <!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Shop Amigo Fiel</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        :focus { outline-offset: 3px; }
+        a:focus { outline: 3px solid #fff9c4; }
+        img { max-width:100%; height:auto; display:block; }
+        body { font-family: Arial, Helvetica, sans-serif; margin:0; padding:0; background:#fffdf8; color:#222; }
+        .container { max-width:1100px; margin:0 auto; padding:16px; box-sizing:border-box; }
+
+        .site-main.container {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 24px;
+            align-items: start;
+        }
+
+        .site-aside {
+            background: linear-gradient(180deg,#dfffe6,#bff6d0);
+            border-left: 6px solid #00b894;
+            padding: 18px;
+            border-radius: 8px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+        }
+
+        .content {
+            max-width: 100%;
+        }
+
+        @media (max-width: 899px) {
+            .site-main.container {
+                grid-template-columns: 1fr;
+            }
+            .site-aside { order: -1; } 
+        }
+
+       
+        input, textarea { width:100%; padding:8px; border:1px solid #ccc; border-radius:6px; box-sizing:border-box; }
+        button { background:#ff7f50; color:#fff; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; }
+        button:hover { opacity:0.95; }
+
+        
+        .site-header { padding:18px 0; background:linear-gradient(90deg,#ff6b6b,#ff8a65); color:#fff; }
+        .nav-list { margin:0; padding:10px 0; list-style:none; display:flex; gap:10px; flex-wrap:wrap; justify-content:center; }
+        .nav-list a { text-decoration:none; font-weight:700; color:#3e2723; padding:8px 12px; border-radius:8px; }
+        .menu-toggle { position:absolute; left:-9999px; }
+        .visually-hidden { position:absolute !important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px); white-space:nowrap; }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>Pet Shop Amigo Fiel</h1>
-        <nav>
-            <ul>
-                <li><a href="indexx.html">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
-                <li><a href="parceiros.html">Parceiros</a></li>
-                <li><a href="curriculo.html">Currículo</a></li>
-            </ul>
-        </nav>
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <h1 style="margin:0"><strong>Pet Shop Amigo Fiel</strong></h1>
+            <p class="slogan" style="margin:6px 0 0; font-style:italic;">Carinho, saúde e bem-estar para seu pet</p>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h2>Bem-vindo ao Pet Shop Amigo Fiel!</h2>
-            <p>
-                Somos apaixonados por animais e dedicados a oferecer o melhor para o seu pet. Aqui você encontra produtos de qualidade, serviços especializados e uma equipe pronta para cuidar do seu melhor amigo.
-            </p>
-            <figure>
-                <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80" alt="Cachorro feliz" width="350">
-                <figcaption>Cachorro feliz após banho e tosa</figcaption>
-            </figure>
-            <figure>
-                <img src="https://images.unsplash.com/photo-1518715308788-300e1e1e1e1e?auto=format&fit=crop&w=600&q=80" alt="Gato brincando" width="350">
-                <figcaption>Gato brincando com brinquedo interativo</figcaption>
-            </figure>
-        </section>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
+    <label for="menu-toggle" class="menu-button" title="Abrir/Fechar menu" aria-hidden="false">
+        <span class="hamburger-line" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+    </label>
 
-        <section>
-            <h2>Nossos Serviços</h2>
-            <ul>
-                <li>Banho e Tosa com profissionais experientes</li>
-                <li>Venda de rações, brinquedos e acessórios</li>
-                <li>Consultas veterinárias e vacinação</li>
-                <li>Adestramento personalizado</li>
-                <li>Hotel e creche para pets</li>
-            </ul>
-            <figure>
-                <img src="https://images.unsplash.com/photo-1518715308788-300e1e1e1e1e?auto=format&fit=crop&w=400&q=80" alt="Gato no veterinário" width="250">
-                <figcaption>Consultas e cuidados veterinários</figcaption>
-            </figure>
-        </section>
+    <nav class="site-nav" role="navigation" aria-label="Menu principal">
+        <ul class="nav-list container">
+            <li><a href="indexx.html">Início</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="produtos.html">Nossos Produtos</a></li>
+            <li><a href="formulário.html">Formulário</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="tabela.html">Tabela de Serviços</a></li>
+            <li><a href="parceiros.html">Parceiros</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+        </ul>
+    </nav>
 
-        <section>
-            <h2>Produtos em Destaque</h2>
-            <table border="1" cellpadding="8">
-                <tr>
-                    <th>Produto</th>
-                    <th>Imagem</th>
-                    <th>Saiba Mais</th>
-                </tr>
-                <tr>
-                    <td>Ração Premium para Cães</td>
-                    <td>
-                        <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=200&q=80" alt="Ração para cães" width="100">
-                    </td>
-                    <td><a href="produtoo1.html">Ver produto</a></td>
-                </tr>
-                <tr>
-                    <td>Brinquedo Interativo para Gatos</td>
-                    <td>
-                        <img src="https://images.unsplash.com/photo-1518715308788-300e1e1e1e1e?auto=format&fit=crop&w=200&q=80" alt="Brinquedo para gatos" width="100">
-                    </td>
-                    <td><a href="produtoo2.html">Ver produto</a></td>
-                </tr>
-                <tr>
-                    <td>Shampoo Pet Natural</td>
-                    <td>
-                        <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=200&q=80" alt="Shampoo pet" width="100">
-                    </td>
-                    <td><a href="produtoo3.html">Ver produto</a></td>
-                </tr>
-                <tr>
-                    <td>Caminha Confortável</td>
-                    <td>
-                        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=200&q=80" alt="Caminha pet" width="100">
-                    </td>
-                    <td><a href="produtoo4.html">Ver produto</a></td>
-                </tr>
-            </table>
-        </section>
+    <main class="site-main container" role="main">
+        <aside class="site-aside" role="complementary" aria-label="Informações rápidas">
+            <h3 style="margin-top:0">Chamadas Rápidas</h3>
 
-        <section>
-            <h2>Depoimentos de Clientes</h2>
-            <blockquote>
-                "Meu cachorro adora o banho e tosa do Amigo Fiel! Atendimento excelente e muito carinho com os pets."
-            </blockquote>
-            <blockquote>
-                "Comprei a caminha confortável e meu gato não sai mais de lá. Recomendo muito!"
-            </blockquote>
-        </section>
+            <section aria-labelledby="horario-title">
+                <h4 id="horario-title">Horário & Contato</h4>
+                <p><strong>Horário:</strong> Seg–Sex · 09:00–19:00</p>
+                <p><strong>Tel:</strong> (99) 99999-9999</p>
+                <p><strong>Email:</strong> contato@amigofielpetshop.com</p>
+            </section>
 
-        <section>
-            <h2>Contato</h2>
-            <p>
-                Telefone: (99) 99999-9999<br>
-                Email: contato@amigofielpetshop.com<br>
-                Endereço: Rua dos Animais, 123 - Centro
-            </p>
-            <ul>
-                <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
-                <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
-            </ul>
-        </section>
+            <hr style="border:none;border-top:1px solid rgba(0,0,0,0.06);margin:12px 0;">
+
+            <section aria-labelledby="promo-title">
+                <h4 id="promo-title">Promoções</h4>
+                <p><strong>Terças:</strong> 10% off em banho e tosa.</p>
+            </section>
+
+            <hr style="border:none;border-top:1px solid rgba(0,0,0,0.06);margin:12px 0;">
+
+            <section aria-labelledby="svc-title">
+                <h4 id="svc-title">Serviços Rápidos</h4>
+                <ul>
+                    <li>Banho &amp; Tosa</li>
+                    <li>Vacinação</li>
+                    <li>Hotel para pets</li>
+                    <li>Adestramento</li>
+                </ul>
+            </section>
+
+            <hr style="border:none;border-top:1px solid rgba(0,0,0,0.06);margin:12px 0;">
+
+            <section aria-labelledby="news-title">
+                <h4 id="news-title">Novidades</h4>
+                <form action="#" method="post" aria-label="Assine nossa newsletter">
+                    <label for="news-email" class="visually-hidden">Seu e-mail</label>
+                    <input id="news-email" name="email" type="email" placeholder="seu@email.com" required>
+                    <div style="margin-top:8px;"><button type="submit">Assinar</button></div>
+                </form>
+            </section>
+        </aside>
+
+        <article class="content">
+            <section class="welcome">
+                <h2><em>Bem-vindo ao Pet Shop Amigo Fiel!</em></h2>
+                <p>Apaixonados por animais e dedicados a oferecer o melhor para o seu pet. Aqui você encontra produtos selecionados, serviços especializados e uma equipe preparada para cuidar do seu melhor amigo com muito carinho.</p>
+                <p>Nossa proposta é oferecer experiência completa: consultoria, saúde preventiva e produtos que trazem conforto e alegria para pets e tutores.</p>
+
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=900&q=80" alt="Cachorro feliz">
+                    <figcaption>Cachorro feliz após banho e tosa</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1518715308788-300e1e1e1e1e?auto=format&fit=crop&w=900&q=80" alt="Gato brincando">
+                    <figcaption>Gato brincando com brinquedo interativo</figcaption>
+                </figure>
+            </section>
+
+            <section class="services">
+                <h2>Serviços Oferecidos</h2>
+                <p>Oferecemos banho e tosa, consultas veterinárias, hotel para pets, adestramento e curadoria de produtos pensada no bem-estar animal.</p>
+                <ul>
+                    <li>Banho e Tosa com profissionais experientes</li>
+                    <li>Venda de rações, brinquedos e acessórios</li>
+                    <li>Consultas veterinárias e vacinação</li>
+                    <li>Adestramento personalizado</li>
+                    <li>Hotel e creche para pets</li>
+                </ul>
+            </section>
+
+            <section class="testimonials">
+                <h2>Depoimentos de Clientes</h2>
+                <blockquote>"Meu cachorro adora o banho e tosa do Amigo Fiel! Atendimento excelente."</blockquote>
+                <blockquote>"Comprei a caminha confortável e meu gato não sai mais de lá. Recomendo!"</blockquote>
+            </section>
+
+            <section class="contact">
+                <h2>Contato</h2>
+                <p>Telefone: (99) 99999-9999<br>Email: contato@amigofielpetshop.com<br>Endereço: Rua dos Animais, 123 - Centro</p>
+                <ul>
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+                </ul>
+            </section>
+        </article>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Pet Shop Amigo Fiel. Todos os direitos reservados.</p>
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2025 Pet Shop Amigo Fiel. Todos os direitos reservados.</p>
+            <p>Rua dos Animais, 123 — (99) 99999-9999 — contato@amigofielpetshop.com</p>
+        </div>
     </footer>
 
 </body>
