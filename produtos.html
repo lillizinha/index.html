@@ -2,13 +2,102 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos - Pet Shop Amigo Fiel</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fff8ee;
+            color: #5a463a;
+            padding: 0 15px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #8a5a42;
+            margin-top: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ffb98b;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #ffd4b3;
+            color: #5a3e2e;
+        }
+
+        td img {
+            border-radius: 12px;
+            max-width: 150px;
+            display: block;
+            margin: auto;
+        }
+
+        td a {
+            display: inline-block;
+            text-decoration: none;
+            background: #ffd4b3;
+            color: #5a3e2e;
+            font-weight: bold;
+            padding: 8px 14px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        td a:hover {
+            background: #ffbe8f;
+            transform: translateY(-2px);
+        }
+
+        .voltar-link {
+            display: inline-block;
+            text-decoration: none;
+            background: #ffd4b3;
+            color: #5a3e2e;
+            font-weight: bold;
+            padding: 10px 18px;
+            border-radius: 25px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .voltar-link:hover {
+            background: #ffbe8f;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            table, th, td {
+                font-size: 14px;
+            }
+
+            td img {
+                max-width: 100px;
+            }
+
+            td a {
+                padding: 6px 10px;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <h1>Nossos Produtos</h1>
 
-    <table border="1" cellpadding="10">
+    <table>
         <tr>
             <th>Imagem</th>
             <th>Produto</th>
@@ -17,11 +106,11 @@
         </tr>
         <tr>
             <td>
-                <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=200&q=80" alt="Ração para cães" width="120">
+                <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=200&q=80" alt="Ração para cães">
             </td>
             <td>Ração Premium para Cães</td>
             <td>
-                Alimento completo e balanceado para cães de todas as idades e portes. Feita com ingredientes selecionados, rica em proteínas, vitaminas e minerais, garante energia, vitalidade e saúde para o seu melhor amigo todos os dias.
+                Alimento completo e balanceado para cães de todas as idades e portes. Rica em proteínas, vitaminas e minerais, garantindo energia e saúde para seu melhor amigo todos os dias.
             </td>
             <td>
                 <a href="produtoo1.html">Ver produto</a>
@@ -29,11 +118,11 @@
         </tr>
         <tr>
             <td>
-                <img src="https://images.unsplash.com/photo-1518715308788-300e1e1e1e1e?auto=format&fit=crop&w=200&q=80" alt="Brinquedo para gatos" width="120">
+                <img src="https://images.unsplash.com/photo-1518715308788-300e1e1e1e1e?auto=format&fit=crop&w=200&q=80" alt="Brinquedo para gatos">
             </td>
             <td>Brinquedo Interativo para Gatos</td>
             <td>
-                Estimula o instinto de caça e proporciona diversão e exercício para gatos de todas as idades. Fabricado com materiais resistentes, ajuda a combater o estresse e o tédio, tornando o dia do seu felino muito mais feliz.
+                Estimula o instinto de caça e proporciona diversão e exercício para gatos. Fabricado com materiais resistentes, ajuda a combater estresse e tédio.
             </td>
             <td>
                 <a href="produtoo2.html">Ver produto</a>
@@ -41,11 +130,11 @@
         </tr>
         <tr>
             <td>
-                <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=200&q=80" alt="Shampoo pet" width="120">
+                <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=200&q=80" alt="Shampoo pet">
             </td>
             <td>Shampoo Pet Natural</td>
             <td>
-                Fórmula suave, hipoalergênica e livre de parabenos, ideal para cães e gatos. Limpa profundamente sem agredir a pele, deixando o pelo macio, brilhante e com um cheirinho agradável após o banho.
+                Fórmula suave, hipoalergênica e livre de parabenos, ideal para cães e gatos. Limpa sem agredir a pele, deixando o pelo macio e cheiroso.
             </td>
             <td>
                 <a href="produtoo3.html">Ver produto</a>
@@ -53,11 +142,11 @@
         </tr>
         <tr>
             <td>
-                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=200&q=80" alt="Caminha pet" width="120">
+                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=200&q=80" alt="Caminha pet">
             </td>
             <td>Caminha Confortável</td>
             <td>
-                Proporcione ao seu pet um descanso de qualidade! Caminha com enchimento macio, tecido antialérgico e base antiderrapante. Disponível em vários tamanhos para cães e gatos, garantindo conforto e segurança.
+                Proporcione descanso de qualidade! Caminha com enchimento macio, tecido antialérgico e base antiderrapante. Disponível em vários tamanhos.
             </td>
             <td>
                 <a href="produtoo4.html">Ver produto</a>
@@ -65,9 +154,9 @@
         </tr>
     </table>
 
-    <p>
-        <a href="indexx.html">Voltar para o indexx</a>
+    <p style="text-align:center;">
+        <a href="indexx.html" class="voltar-link">🏠 Voltar para a página inicial</a>
     </p>
 
-</body></body>
+</body>
 </html>
