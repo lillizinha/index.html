@@ -1,57 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <title>Tabela Pet Shop Amigo Fiel</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabela de Serviços - Pet Shop Amigo Fiel</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff0f5;
+    color: #5a463a;
+    padding: 0 15px;
+}
+h1 {
+    text-align: center;
+    color: #d81b60;
+    margin: 25px 0;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+    border: 2px solid #ffb6c1;
+    padding: 12px;
+    text-align: left;
+    border-radius: 8px;
+}
+th {
+    background: #ff69b4;
+    color: #fff;
+}
+td {
+    background: #ffe3f8;
+}
+td img {
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+.voltar-link {
+    display: inline-block;
+    text-decoration: none;
+    background: #ffb6c1;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+.voltar-link:hover {
+    background: #ff1493;
+    transform: translateY(-2px);
+}
+@media (max-width: 600px) {
+    table, th, td {
+        display: block;
+        width: 100%;
+    }
+    th, td {
+        border: none;
+        margin-bottom: 10px;
+    }
+    td img {
+        width: 100%;
+        height: auto;
+    }
+}
+</style>
 </head>
 <body>
 
-    <h1>Tabela de Serviços Pet Shop Amigo Fiel</h1>
+<h1>Serviços Pet Shop Amigo Fiel 🐾</h1>
 
-    <table border="1" cellpadding="10">
-        <tr>
-            <th>Serviço</th>
-            <th>Descrição</th>
-            <th>Imagem</th>
-            <th>Preço Médio</th>
-        </tr>
-        <tr>
-            <td>Banho e Tosa</td>
-            <td>Higiene, beleza e cuidado para cães e gatos, com produtos de alta qualidade e profissionais experientes.</td>
-            <td>
-                <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=120&q=80" alt="Banho e tosa" width="100">
-            </td>
-            <td>R$ 50,00</td>
-        </tr>
-        <tr>
-            <td>Consulta Veterinária</td>
-            <td>Atendimento clínico, vacinação, check-ups e orientações para garantir a saúde do seu pet.</td>
-            <td>
-                <img src="https://images.unsplash.com/photo-1518715308788-300e1e1e1e1e?auto=format&fit=crop&w=120&q=80" alt="Veterinário" width="100">
-            </td>
-            <td>R$ 80,00</td>
-        </tr>
-        <tr>
-            <td>Hotel para Pets</td>
-            <td>Ambiente seguro e confortável para hospedar seu pet durante viagens ou compromissos, com recreação e acompanhamento.</td>
-            <td>
-                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=120&q=80" alt="Hotel para pets" width="100">
-            </td>
-            <td>R$ 70,00 (diária)</td>
-        </tr>
-        <tr>
-            <td>Adestramento</td>
-            <td>Treinamento personalizado para melhorar o comportamento e a convivência do seu animal de estimação.</td>
-            <td>
-                <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=120&q=80" alt="Adestramento" width="100">
-            </td>
-            <td>R$ 100,00 (sessão)</td>
-        </tr>
-    </table>
+<table>
+    <tr>
+        <th>Serviço</th>
+        <th>Descrição</th>
+        <th>Imagem</th>
+        <th>Preço Médio</th>
+    </tr>
+    <tr>
+        <td>Banho e Tosa</td>
+        <td>Higiene completa e estética para cães e gatos, com produtos de alta qualidade, hidratação especial, tosa personalizada e profissionais experientes. Indicado para manter o pelo saudável, macio e cheiroso.</td>
+        <td><img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=120&q=80" alt="Banho e tosa" width="100"></td>
+        <td>R$ 50,00</td>
+    </tr>
+    <tr>
+        <td>Consulta Veterinária</td>
+        <td>Atendimento clínico, vacinação, check-ups completos e orientações personalizadas para garantir saúde e bem-estar do seu pet. Indicado para prevenção e acompanhamento de doenças e tratamentos especiais.</td>
+        <td><img src="https://images.unsplash.com/photo-1518715308788-300e1e1e1e1e?auto=format&fit=crop&w=120&q=80" alt="Veterinário" width="100"></td>
+        <td>R$ 80,00</td>
+    </tr>
+    <tr>
+        <td>Hotel para Pets</td>
+        <td>Hospedagem segura e confortável, com recreação, alimentação balanceada e monitoramento constante. Indicado para viagens, compromissos ou férias, garantindo bem-estar e diversão para o seu pet.</td>
+        <td><img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=120&q=80" alt="Hotel para pets" width="100"></td>
+        <td>R$ 70,00 (diária)</td>
+    </tr>
+    <tr>
+        <td>Adestramento</td>
+        <td>Treinamento personalizado para melhorar comportamento, socialização e obediência do seu pet. Indicado para filhotes e adultos, ajuda a prevenir problemas comportamentais e fortalece vínculo entre tutor e animal.</td>
+        <td><img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=120&q=80" alt="Adestramento" width="100"></td>
+        <td>R$ 100,00 (sessão)</td>
+    </tr>
+</table>
 
-    <p>
-        <a href="indexx.html">Voltar para o início</a>
-    </p>
+<p style="text-align:center;">
+    <a href="indexx.html" class="voltar-link">🏠 Voltar para o início</a>
+</p>
 
 </body>
 </html>
