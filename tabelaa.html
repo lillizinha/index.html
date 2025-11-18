@@ -1,38 +1,201 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tabela de Serviços - Pet Shop Amigo Fiel</title>
-<link rel="stylesheet" href="style.css">
-<style>
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #fff0f5;
-    color: #5a463a;
-    padding: 0 15px;
-}
-h1 {
-    text-align: center;
-    color: #d81b60;
-    margin: 25px 0;
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-th, td {
-    border: 2px solid #ffb6c1;
-    padding: 12px;
-    text-align: left;
-    border-radius: 8px;
-}
-th {
-    background: #ff69b4;
-    color: #fff;
-}
-td {
-    background: #ffe3f8;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Serviços - Pet Shop Amigo Fiel</title>
+
+    <!-- CSS Externo (referência, caso exista) -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- CSS Interno -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fff0f5;
+            color: #880e4f;
+        }
+
+        header {
+            background: linear-gradient(90deg, #ffb6c1, #ff69b4, #ff1493);
+            text-align: center;
+            padding: 25px 15px;
+            color: white;
+            border-bottom: 5px solid #ff69b4;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            background: #ffc0cb;
+            padding: 14px 0;
+        }
+
+        .nav-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            background: #ffb6c1;
+            padding: 10px 16px;
+            border-radius: 25px;
+            color: #fff;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-list a:hover {
+            background: #ff69b4;
+            transform: translateY(-3px);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #ffe3f8;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #d81b60;
+            border-bottom: 3px solid #ff69b4;
+            padding-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th {
+            background: #ff69b4;
+            color: white;
+            padding: 12px;
+            font-size: 18px;
+        }
+
+        td {
+            padding: 12px;
+            text-align: center;
+            background: #ffe6ef;
+            font-weight: bold;
+            color: #880e4f;
+        }
+
+        tr:nth-child(even) td {
+            background: #ffd3e2;
+        }
+
+        tr:hover td {
+            background: #ffb6c1;
+            cursor: pointer;
+        }
+
+        footer {
+            background: linear-gradient(90deg, #ffb6c1, #ff69b4, #ff1493);
+            text-align: center;
+            padding: 20px 10px;
+            color: #fff;
+            margin-top: 40px;
+            border-top: 3px solid #d81b60;
+            border-radius: 15px 15px 0 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 style="color:white;">🐾 Tabela de Serviços 🐾</h1>
+        <p style="font-size:16px;">Veja nossos preços atualizados com amor e muito brilho rosa ✨</p>
+    </header>
+
+    <nav>
+        <ul class="nav-list">
+            <li><a href="indexx.html">Início</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="produtos.html">Nossos Produtos</a></li>
+            <li><a href="formulário.html">Formulário</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="tabela.html">Tabela</a></li>
+            <li><a href="parceiros.html">Parceiros</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <h2>Lista de Serviços e Valores</h2>
+
+        <p style="background:#ffc0cb; padding:10px; border-radius:10px;">
+            Aqui você encontra todos os nossos serviços disponíveis com valores atualizados.  
+            Trabalhamos com muito amor, cuidado e dedicação para deixar seu pet maravilhoso ✨🐶🐱  
+        </p>
+
+        <table border="1">
+            <tr>
+                <th>Serviço</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+            </tr>
+
+            <tr>
+                <td>Banho Completo</td>
+                <td>Banho com água morninha + shampoo especial + perfume 💖</td>
+                <td>R$ 40,00</td>
+            </tr>
+
+            <tr>
+                <td>Tosa Estilizada</td>
+                <td>Tosa completinha no estilo que você preferir ✂️✨</td>
+                <td>R$ 55,00</td>
+            </tr>
+
+            <tr>
+                <td>Hidratação Premium</td>
+                <td>Deixa os pelos brilhosos e macios igual nuvem 🍭</td>
+                <td>R$ 30,00</td>
+            </tr>
+
+            <tr>
+                <td>Hospedagem</td>
+                <td>Seu pet passa a noite em suíte confortável 🛏️🐶</td>
+                <td>R$ 70,00 / diária</td>
+            </tr>
+
+            <tr>
+                <td>Adestramento</td>
+                <td>Treinamento comportamental com carinho e paciência 💬🐕‍🦺</td>
+                <td>R$ 120,00</td>
+            </tr>
+
+            <tr>
+                <td>Consulta Veterinária</td>
+                <td>Feita por veterinário parceiro, com hora marcada 🩺</td>
+                <td>R$ 90,00</td>
+            </tr>
+
+        </table>
+
+    </main>
+
+    <footer>
+        <p>🐾 Pet Shop Amigo Fiel — Amor em cada patinha 💖</p>
+        <p>📞 (99) 99999-9999 | 📧 contato@amigofielpetshop.com</p>
+    </footer>
+
+</body>
+</html>
