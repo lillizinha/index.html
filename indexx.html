@@ -11,8 +11,8 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif; /* fonte nova, sem dor de cabeça */
-            background: #fff0f5; /* lilás/rosa suave */
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fff0f5;
             color: #880e4f;
         }
 
@@ -30,6 +30,7 @@
             font-size: 40px;
             font-weight: bold;
         }
+
         header p {
             margin: 5px 0 0;
             font-size: 18px;
@@ -153,14 +154,20 @@
         }
 
         footer {
-            background: #ffb6c1;
+            background: linear-gradient(90deg, #ffb6c1, #ff69b4, #ff1493);
             text-align: center;
-            padding: 20px;
+            padding: 25px 15px;
             margin-top: 30px;
-            font-size: 14px;
+            font-size: 15px;
             color: #fff;
-            border-top: 3px solid #ff69b4;
+            border-top: 3px solid #d81b60;
             font-weight: bold;
+            border-radius: 15px 15px 0 0;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: underline;
         }
 
         @media (max-width: 950px) {
@@ -184,7 +191,7 @@
 <body>
 
     <header>
-        <h1 style="color:#fff;">🐾 Pet Shop Amigo Fiel 🐾</h1> <!-- inline só pra fechar o requisito -->
+        <h1 style="color:#fff;">🐾 Pet Shop Amigo Fiel 🐾</h1>
         <p>Porque seu bichinho merece carinho, cuidado e um lacinho fofo!</p>
     </header>
 
@@ -209,6 +216,11 @@
             <p style="background:#ffc0cb; padding:5px; border-radius:8px;">• Escovação frequente</p>
             <p style="background:#ffc0cb; padding:5px; border-radius:8px;">• Alimentação balanceada</p>
             <p style="background:#ffc0cb; padding:5px; border-radius:8px;">• Muito amor e cafuné 💖</p>
+
+            <h3 style="color:#d81b60;">Promoções & Dicas ✨</h3>
+            <p style="background:#ffc0cb; padding:5px; border-radius:8px;">• Desconto em banho + tosa toda terça-feira!</p>
+            <p style="background:#ffc0cb; padding:5px; border-radius:8px;">• Brinquedos novos toda semana!</p>
+            <p style="background:#ffc0cb; padding:5px; border-radius:8px;">• Dicas de cuidados diários para seu pet</p>
 
             <h3 style="color:#d81b60;">Contato Rápido 📞</h3>
             <p style="background:#ffc0cb; padding:5px; border-radius:8px;">(99) 99999-9999</p>
@@ -236,6 +248,8 @@
             <h2 style="color:#d81b60;">Bem-vindos ao Mundo Mais Fofo da Cidade! 🌸</h2>
             <p style="background:#ffe3f8; padding:10px; border-radius:10px;">Quer deixar seu doguinho cheiroso? Seu gatinho elegante? Aqui é o lugar certo! Nosso pet shop trabalha com muito profissionalismo, mas também com muito amor, porque cada animalzinho é único e especial.</p>
             <p style="background:#ffe3f8; padding:10px; border-radius:10px;">Temos banhos especiais, tosas estilizadas, laços encantadores, brinquedos, ração premium e um atendimento cheio de carinho. Aqui, seu bichinho não é cliente, é família.</p>
+            <p style="background:#ffe3f8; padding:10px; border-radius:10px;">Além disso, contamos com especialistas em comportamento animal e veterinários parceiros para garantir que a saúde do seu pet esteja sempre em dia.</p>
+            <p style="background:#ffe3f8; padding:10px; border-radius:10px;">Oferecemos também serviços de adestramento, hospedagem e consultas periódicas, além de dicas exclusivas para você cuidar do seu bichinho em casa.</p>
 
             <h3 style="color:#d81b60;">Nossos Serviços 🌟</h3>
             <ul>
@@ -244,6 +258,8 @@
                 <li style="background:#ffc0cb; padding:5px; border-radius:8px;">Rações selecionadas</li>
                 <li style="background:#ffc0cb; padding:5px; border-radius:8px;">Brinquedos novos toda semana</li>
                 <li style="background:#ffc0cb; padding:5px; border-radius:8px;">Atendimento veterinário em parceria</li>
+                <li style="background:#ffc0cb; padding:5px; border-radius:8px;">Hospedagem segura e confortável</li>
+                <li style="background:#ffc0cb; padding:5px; border-radius:8px;">Adestramento personalizado</li>
             </ul>
 
             <h3 style="color:#d81b60;">Por que escolher a gente? 💖</h3>
@@ -257,7 +273,7 @@
             </figure>
 
             <figure>
-                <img src="https://images.unsplash.com/photo-1601758123927-6db38d2d9d9c?auto=format&fit=crop&w=900&q=80" class="dog-img">
+                <img src="https://images.unsplash.com/photo-1601758123927-6db38d2d9d9c?auto=format&w=900&q=80" class="dog-img">
                 <figcaption style="color:#d81b60;">Gato brincando com brinquedo interativo</figcaption>
             </figure>
         </main>
@@ -265,7 +281,13 @@
     </div>
 
     <footer>
-        © 2025 Pet Shop Amigo Fiel — Amor em cada patinha 🐾
+        <p style="font-size:16px;">🐾 Pet Shop Amigo Fiel — Amor em cada patinha 💖</p>
+        <p style="font-size:14px;">📞 (99) 99999-9999 &nbsp;|&nbsp; 📧 contato@amigofielpetshop.com</p>
+        <p style="font-size:14px;">Siga-nos nas redes sociais: 
+            <a href="#" style="color:#fff;">Instagram</a> | 
+            <a href="#" style="color:#fff;">Facebook</a> | 
+            <a href="#" style="color:#fff;">TikTok</a>
+        </p>
     </footer>
 
 </body>
