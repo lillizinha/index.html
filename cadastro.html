@@ -1,115 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <title>Cadastro - Pet Shop Amigo Fiel</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #fff8ee; /* fundo do site */
-            color: #5a463a;      /* marrom suave */
-            padding: 15px;
-        }
-
-        header {
-            text-align: center;
-            padding: 20px 0;
-            background: linear-gradient(90deg, #ffddb8, #ffcba4, #ffb98b);
-            color: #5a3e2e;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            margin-bottom: 25px;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 30px;
-        }
-
-        form {
-            max-width: 450px;
-            background: #fffaf3;
-            padding: 25px;
-            margin: 20px auto;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border: 2px solid #ffddb8;
-        }
-
-        label {
-            font-weight: bold;
-            color: #5a3e2e;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 10px;
-            border-radius: 8px;
-            border: 1px solid #ffcba4;
-            margin-top: 5px;
-            margin-bottom: 20px;
-            background: #fff8ee;
-        }
-
-        input[type="submit"] {
-            background: #ffd4b3;
-            color: #5a3e2e;
-            padding: 12px;
-            font-weight: bold;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: 0.3s;
-            font-size: 16px;
-        }
-
-        input[type="submit"]:hover {
-            background: #ffbe8f;
-            transform: translateY(-2px);
-        }
-
-        p {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        a {
-            text-decoration: none;
-            background: #ffd4b3;
-            color: #5a3e2e;
-            padding: 10px 18px;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        a:hover {
-            background: #ffbe8f;
-            transform: translateY(-2px);
-        }
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro - Pet Shop Amigo Fiel</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+    margin: 0;
+    font-family: 'Verdana', sans-serif;
+    background: #fff0f5;
+    color: #5a463a;
+    padding: 0 15px;
+}
+header {
+    text-align: center;
+    padding: 25px 0;
+    background: linear-gradient(90deg, #ffb6c1, #ff69b4, #ff1493);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-radius: 8px;
+}
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+form {
+    max-width: 450px;
+    background: #ffe3f8;
+    padding: 25px;
+    margin: 25px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border: 2px solid #ff69b4;
+}
+label {
+    font-weight: bold;
+    color: #d81b60;
+    display: block;
+    margin-top: 15px;
+}
+input, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ff69b4;
+    margin-top: 5px;
+    background: #fff0f5;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+input:focus, select:focus {
+    border-color: #d81b60;
+    box-shadow: 0 0 5px #ff69b4;
+    outline: none;
+}
+input[type="submit"] {
+    background: #ff69b4;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    padding: 12px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+input[type="submit"]:hover {
+    background: #d81b60;
+    transform: translateY(-2px);
+}
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+a {
+    text-decoration: none;
+    background: #ffb6c1;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+a:hover {
+    background: #ff1493;
+    transform: translateY(-2px);
+}
+@media (max-width: 500px) {
+    form {
+        padding: 15px;
+    }
+}
+</style>
 </head>
 <body>
 
 <header>
-    <h1>Cadastro de Cliente</h1>
+    <h1>Cadastro de Cliente 🐾</h1>
 </header>
 
 <form action="#" method="post">
     <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" required>
+    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
 
     <label for="email">E-mail:</label>
-    <input type="email" id="email" name="email" required>
+    <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
 
     <label for="telefone">Telefone:</label>
-    <input type="tel" id="telefone" name="telefone" required>
+    <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" required>
 
     <label for="pet">Nome do Pet:</label>
-    <input type="text" id="pet" name="pet">
+    <input type="text" id="pet" name="pet" placeholder="Digite o nome do seu bichinho">
 
     <label for="tipo">Tipo de Pet:</label>
     <select id="tipo" name="tipo">
@@ -122,7 +125,7 @@
 </form>
 
 <p>
-    <a href="indexx.html">Voltar para o Início</a>
+    <a href="indexx.html">🏠 Voltar para a página inicial</a>
 </p>
 
 </body>
