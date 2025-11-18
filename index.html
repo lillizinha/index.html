@@ -1,77 +1,195 @@
-
-        
-            <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Shop Amigo Fiel</title>
 
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- CSS externo só como referência -->
+    <link rel="stylesheet" href="css/style.css">
 
     <style>
-        :focus { outline-offset: 3px; }
-        a:focus { outline: 3px solid #fff9c4; }
-        img { max-width:100%; height:auto; display:block; }
-        body { font-family: Arial, Helvetica, sans-serif; margin:0; padding:0; background:#fffdf8; color:#222; }
-        .container { max-width:1100px; margin:0 auto; padding:16px; box-sizing:border-box; }
-
-        .site-main.container {
-            display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 24px;
-            align-items: start;
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif; /* fonte nova, sem dor de cabeça */
+            background: #fff0f5; /* lilás/rosa suave */
+            color: #880e4f;
         }
 
-        .site-aside {
-            background: linear-gradient(180deg,#dfffe6,#bff6d0);
-            border-left: 6px solid #00b894;
+        header {
+            background: linear-gradient(90deg, #ffb6c1, #ff69b4, #ff1493);
+            padding: 25px 15px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border-bottom: 5px solid #ff69b4;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 18px;
+        }
+
+        nav {
+            background: #ffc0cb;
+            padding: 14px 0;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+        }
+
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            padding: 10px 16px;
+            background: #ffb6c1;
+            color: #fff;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .nav-list a:hover,
+        .nav-list a:focus {
+            background: #ff69b4;
+            transform: translateY(-3px);
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            gap: 20px;
+            padding: 0 15px;
+            flex-wrap: wrap;
+        }
+
+        aside {
+            flex: 0 0 280px;
+            background: #ffe3f8;
             padding: 18px;
-            border-radius: 8px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.15);
         }
 
-        .content {
-            max-width: 100%;
+        aside h3 {
+            margin-top: 0;
+            color: #d81b60;
+            text-decoration: underline;
         }
 
-        @media (max-width: 899px) {
-            .site-main.container {
-                grid-template-columns: 1fr;
+        main {
+            flex: 1;
+            background: #fff0f5;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+        }
+
+        main h2 {
+            color: #d81b60;
+            border-bottom: 3px solid #ff69b4;
+            padding-bottom: 8px;
+        }
+
+        main h3 {
+            color: #c2185b;
+        }
+
+        .dog-img {
+            width: 100%;
+            border-radius: 15px;
+            margin-top: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        input[type="email"], button {
+            width: 100%;
+            padding: 8px 10px;
+            border-radius: 10px;
+            border: 1px solid #ff69b4;
+            box-sizing: border-box;
+            margin-top: 6px;
+        }
+
+        button {
+            background: #ff69b4;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        button:hover {
+            background: #ff1493;
+        }
+
+        ul.testimonials {
+            padding-left: 20px;
+        }
+
+        ul.testimonials li {
+            margin-bottom: 10px;
+            font-style: italic;
+            color: #880e4f;
+            background: #ffe3f8;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        footer {
+            background: #ffb6c1;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #fff;
+            border-top: 3px solid #ff69b4;
+            font-weight: bold;
+        }
+
+        @media (max-width: 950px) {
+            .container {
+                flex-direction: column;
+                padding: 0 15px;
             }
-            .site-aside { order: -1; } 
+
+            aside, main {
+                flex: 1 1 100%;
+            }
+
+            .nav-list a {
+                min-width: 90px;
+                padding: 10px 12px;
+            }
         }
-
-       
-        input, textarea { width:100%; padding:8px; border:1px solid #ccc; border-radius:6px; box-sizing:border-box; }
-        button { background:#ff7f50; color:#fff; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; }
-        button:hover { opacity:0.95; }
-
-        
-        .site-header { padding:18px 0; background:linear-gradient(90deg,#ff6b6b,#ff8a65); color:#fff; }
-        .nav-list { margin:0; padding:10px 0; list-style:none; display:flex; gap:10px; flex-wrap:wrap; justify-content:center; }
-        .nav-list a { text-decoration:none; font-weight:700; color:#3e2723; padding:8px 12px; border-radius:8px; }
-        .menu-toggle { position:absolute; left:-9999px; }
-        .visually-hidden { position:absolute !important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px); white-space:nowrap; }
     </style>
 </head>
+
 <body>
 
-    <header class="site-header" role="banner">
-        <div class="container header-inner">
-            <h1 style="margin:0"><strong>Pet Shop Amigo Fiel</strong></h1>
-            <p class="slogan" style="margin:6px 0 0; font-style:italic;">Carinho, saúde e bem-estar para seu pet</p>
-        </div>
+    <header>
+        <h1 style="color:#fff;">🐾 Pet Shop Amigo Fiel 🐾</h1> <!-- inline só pra fechar o requisito -->
+        <p>Porque seu bichinho merece carinho, cuidado e um lacinho fofo!</p>
     </header>
 
-    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
-    <label for="menu-toggle" class="menu-button" title="Abrir/Fechar menu" aria-hidden="false">
-        <span class="hamburger-line" aria-hidden="true"></span>
-        <span class="visually-hidden">Menu</span>
-    </label>
-
-    <nav class="site-nav" role="navigation" aria-label="Menu principal">
-        <ul class="nav-list container">
+    <nav>
+        <ul class="nav-list">
             <li><a href="indexx.html">Início</a></li>
             <li><a href="sobre.html">Sobre Nós</a></li>
             <li><a href="produtos.html">Nossos Produtos</a></li>
@@ -83,99 +201,71 @@
         </ul>
     </nav>
 
-    <main class="site-main container" role="main">
-        <aside class="site-aside" role="complementary" aria-label="Informações rápidas">
-            <h3 style="margin-top:0">Chamadas Rápidas</h3>
+    <div class="container">
 
-            <section aria-labelledby="horario-title">
-                <h4 id="horario-title">Horário & Contato</h4>
-                <p><strong>Horário:</strong> Seg–Sex · 09:00–19:00</p>
-                <p><strong>Tel:</strong> (99) 99999-9999</p>
-                <p><strong>Email:</strong> contato@amigofielpetshop.com</p>
-            </section>
+        <aside>
+            <h3 style="color:#d81b60;">Cuidados Essenciais 🐶</h3>
+            <p style="background:#ffc0cb; padding:5px; border-radius:8px;">• Banho com água morninha</p>
+            <p style="background:#ffc0cb; padding:5px; border-radius:8px;">• Escovação frequente</p>
+            <p style="background:#ffc0cb; padding:5px; border-radius:8px;">• Alimentação balanceada</p>
+            <p style="background:#ffc0cb; padding:5px; border-radius:8px;">• Muito amor e cafuné 💖</p>
 
-            <hr style="border:none;border-top:1px solid rgba(0,0,0,0.06);margin:12px 0;">
+            <h3 style="color:#d81b60;">Contato Rápido 📞</h3>
+            <p style="background:#ffc0cb; padding:5px; border-radius:8px;">(99) 99999-9999</p>
+            <p style="background:#ffc0cb; padding:5px; border-radius:8px;">contato@amigofielpetshop.com</p>
 
-            <section aria-labelledby="promo-title">
-                <h4 id="promo-title">Promoções</h4>
-                <p><strong>Terças:</strong> 10% off em banho e tosa.</p>
-            </section>
+            <h3 style="color:#d81b60;">Newsletter ✨</h3>
+            <p style="background:#ffc0cb; padding:5px; border-radius:8px;">Receba novidades e promoções:</p>
+            <form>
+                <input type="email" placeholder="seu@email.com" required style="border:1px solid #ff69b4; background:#ffe3f8; border-radius:8px;">
+                <button type="submit" style="background:#ff69b4; border-radius:8px;">Assinar</button>
+            </form>
 
-            <hr style="border:none;border-top:1px solid rgba(0,0,0,0.06);margin:12px 0;">
+            <h3 style="color:#d81b60;">Opiniões 💖</h3>
+            <ul class="testimonials">
+                <li>"Meu cachorro adora o banho e tosa do Amigo Fiel!"</li>
+                <li>"Comprei uma caminha confortável e meu gato não sai mais de lá!"</li>
+                <li>"O atendimento é super simpático, sempre tiram minhas dúvidas!"</li>
+                <li>"Meus pets saem cheirosos e felizes toda vez que vão ao petshop!"</li>
+            </ul>
 
-            <section aria-labelledby="svc-title">
-                <h4 id="svc-title">Serviços Rápidos</h4>
-                <ul>
-                    <li>Banho &amp; Tosa</li>
-                    <li>Vacinação</li>
-                    <li>Hotel para pets</li>
-                    <li>Adestramento</li>
-                </ul>
-            </section>
-
-            <hr style="border:none;border-top:1px solid rgba(0,0,0,0.06);margin:12px 0;">
-
-            <section aria-labelledby="news-title">
-                <h4 id="news-title">Novidades</h4>
-                <form action="#" method="post" aria-label="Assine nossa newsletter">
-                    <label for="news-email" class="visually-hidden">Seu e-mail</label>
-                    <input id="news-email" name="email" type="email" placeholder="seu@email.com" required>
-                    <div style="margin-top:8px;"><button type="submit">Assinar</button></div>
-                </form>
-            </section>
+            <img src="https://i.pinimg.com/736x/64/20/aa/6420aaa59f7ebf082e28fa8a9053ed57.jpg" class="dog-img" alt="Cachorro fofo com lacinho rosa">
         </aside>
 
-        <article class="content">
-            <section class="welcome">
-                <h2><em>Bem-vindo ao Pet Shop Amigo Fiel!</em></h2>
-                <p>Apaixonados por animais e dedicados a oferecer o melhor para o seu pet. Aqui você encontra produtos selecionados, serviços especializados e uma equipe preparada para cuidar do seu melhor amigo com muito carinho.</p>
-                <p>Nossa proposta é oferecer experiência completa: consultoria, saúde preventiva e produtos que trazem conforto e alegria para pets e tutores.</p>
+        <main>
+            <h2 style="color:#d81b60;">Bem-vindos ao Mundo Mais Fofo da Cidade! 🌸</h2>
+            <p style="background:#ffe3f8; padding:10px; border-radius:10px;">Quer deixar seu doguinho cheiroso? Seu gatinho elegante? Aqui é o lugar certo! Nosso pet shop trabalha com muito profissionalismo, mas também com muito amor, porque cada animalzinho é único e especial.</p>
+            <p style="background:#ffe3f8; padding:10px; border-radius:10px;">Temos banhos especiais, tosas estilizadas, laços encantadores, brinquedos, ração premium e um atendimento cheio de carinho. Aqui, seu bichinho não é cliente, é família.</p>
 
-                <figure>
-                    <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=900&q=80" alt="Cachorro feliz">
-                    <figcaption>Cachorro feliz após banho e tosa</figcaption>
-                </figure>
+            <h3 style="color:#d81b60;">Nossos Serviços 🌟</h3>
+            <ul>
+                <li style="background:#ffc0cb; padding:5px; border-radius:8px;">Banho e tosa com hidratação</li>
+                <li style="background:#ffc0cb; padding:5px; border-radius:8px;">Colocação de lacinhos e bandanas</li>
+                <li style="background:#ffc0cb; padding:5px; border-radius:8px;">Rações selecionadas</li>
+                <li style="background:#ffc0cb; padding:5px; border-radius:8px;">Brinquedos novos toda semana</li>
+                <li style="background:#ffc0cb; padding:5px; border-radius:8px;">Atendimento veterinário em parceria</li>
+            </ul>
 
-                <figure>
-                    <img src="https://images.unsplash.com/photo-1518715308788-300e1e1e1e1e?auto=format&fit=crop&w=900&q=80" alt="Gato brincando">
-                    <figcaption>Gato brincando com brinquedo interativo</figcaption>
-                </figure>
-            </section>
+            <h3 style="color:#d81b60;">Por que escolher a gente? 💖</h3>
+            <p style="background:#ffe3f8; padding:10px; border-radius:10px;">Somos apaixonados por animais. Aqui o carinho é garantido, o cuidado é real e o seu pet sai DESFILANDO de tão lindo.</p>
+            <p style="background:#ffe3f8; padding:10px; border-radius:10px;">Além disso, temos dicas para manter seu pet feliz em casa, ideias de brincadeiras e cuidados diários que fazem toda a diferença na saúde deles.</p>
+            <p style="background:#ffe3f8; padding:10px; border-radius:10px;">Queremos que cada visita seja uma experiência divertida e acolhedora, tanto para você quanto para seu bichinho. Cada patinha é tratada com amor e atenção.</p>
 
-            <section class="services">
-                <h2>Serviços Oferecidos</h2>
-                <p>Oferecemos banho e tosa, consultas veterinárias, hotel para pets, adestramento e curadoria de produtos pensada no bem-estar animal.</p>
-                <ul>
-                    <li>Banho e Tosa com profissionais experientes</li>
-                    <li>Venda de rações, brinquedos e acessórios</li>
-                    <li>Consultas veterinárias e vacinação</li>
-                    <li>Adestramento personalizado</li>
-                    <li>Hotel e creche para pets</li>
-                </ul>
-            </section>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1619983081563-430957a2a5e9?auto=format&fit=crop&w=900&q=80" class="dog-img">
+                <figcaption style="color:#d81b60;">Cachorrinho elegante com lacinho rosa</figcaption>
+            </figure>
 
-            <section class="testimonials">
-                <h2>Depoimentos de Clientes</h2>
-                <blockquote>"Meu cachorro adora o banho e tosa do Amigo Fiel! Atendimento excelente."</blockquote>
-                <blockquote>"Comprei a caminha confortável e meu gato não sai mais de lá. Recomendo!"</blockquote>
-            </section>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1601758123927-6db38d2d9d9c?auto=format&fit=crop&w=900&q=80" class="dog-img">
+                <figcaption style="color:#d81b60;">Gato brincando com brinquedo interativo</figcaption>
+            </figure>
+        </main>
 
-            <section class="contact">
-                <h2>Contato</h2>
-                <p>Telefone: (99) 99999-9999<br>Email: contato@amigofielpetshop.com<br>Endereço: Rua dos Animais, 123 - Centro</p>
-                <ul>
-                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
-                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
-                </ul>
-            </section>
-        </article>
-    </main>
+    </div>
 
-    <footer class="site-footer" role="contentinfo">
-        <div class="container">
-            <p>&copy; 2025 Pet Shop Amigo Fiel. Todos os direitos reservados.</p>
-            <p>Rua dos Animais, 123 — (99) 99999-9999 — contato@amigofielpetshop.com</p>
-        </div>
+    <footer>
+        © 2025 Pet Shop Amigo Fiel — Amor em cada patinha 🐾
     </footer>
 
 </body>
