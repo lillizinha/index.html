@@ -4,98 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos - Pet Shop Amigo Fiel</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Link externo só de referência -->
+    <link rel="stylesheet" href="css/style.css">
+
     <style>
         body {
-            margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background: #fff8ee;
-            color: #5a463a;
-            padding: 0 15px;
+            background: #fff0f5; /* rosa suave */
+            color: #880e4f;
+            margin: 0;
+            padding: 0;
         }
 
-        h1 {
+        header {
+            background: linear-gradient(90deg, #ffb6c1, #ff69b4, #ff1493);
+            padding: 20px;
             text-align: center;
-            color: #8a5a42;
-            margin-top: 25px;
+            color: #fff;
+            border-bottom: 5px solid #ff69b4;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 15px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #d81b60;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            background: #ffe3f8;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
         th, td {
-            border: 1px solid #ffb98b;
-            padding: 12px;
+            padding: 12px 15px;
+            border: 1px solid #ffb6c1;
             text-align: left;
             vertical-align: top;
         }
 
         th {
-            background: #ffd4b3;
-            color: #5a3e2e;
+            background: #ffb6c1;
+            color: #fff;
+            font-size: 18px;
         }
 
         td img {
-            border-radius: 12px;
-            max-width: 150px;
-            display: block;
-            margin: auto;
+            width: 150px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
         }
 
         td a {
-            display: inline-block;
+            color: #ff1493;
             text-decoration: none;
-            background: #ffd4b3;
-            color: #5a3e2e;
             font-weight: bold;
-            padding: 8px 14px;
-            border-radius: 20px;
-            transition: all 0.3s ease;
         }
 
         td a:hover {
-            background: #ffbe8f;
-            transform: translateY(-2px);
+            text-decoration: underline;
         }
 
-        .voltar-link {
-            display: inline-block;
-            text-decoration: none;
-            background: #ffd4b3;
-            color: #5a3e2e;
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #ffb6c1;
+            color: #fff;
+            border-top: 3px solid #ff69b4;
+            margin-top: 40px;
             font-weight: bold;
-            padding: 10px 18px;
-            border-radius: 25px;
-            margin-top: 20px;
-            transition: all 0.3s ease;
         }
 
-        .voltar-link:hover {
-            background: #ffbe8f;
-            transform: translateY(-2px);
-        }
-
-        @media (max-width: 768px) {
-            table, th, td {
-                font-size: 14px;
-            }
-
+        @media (max-width: 800px) {
             td img {
-                max-width: 100px;
+                width: 100px;
             }
-
-            td a {
-                padding: 6px 10px;
+            th, td {
+                font-size: 14px;
             }
         }
     </style>
 </head>
 <body>
 
-    <h1>Nossos Produtos</h1>
+<header>
+    <h1 style="color:#fff;">🐾 Nossos Produtos - Pet Shop Amigo Fiel 🐾</h1> <!-- inline só pra fechar requisito -->
+</header>
+
+<main>
+    <h2>Confira Nossas Opções Super Fofinhas! 🌸</h2>
 
     <table>
         <tr>
@@ -109,54 +122,43 @@
                 <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=200&q=80" alt="Ração para cães">
             </td>
             <td>Ração Premium para Cães</td>
-            <td>
-                Alimento completo e balanceado para cães de todas as idades e portes. Rica em proteínas, vitaminas e minerais, garantindo energia e saúde para seu melhor amigo todos os dias.
-            </td>
-            <td>
-                <a href="produtoo1.html">Ver produto</a>
-            </td>
+            <td>Alimento completo e balanceado para cães de todas as idades e portes. Feita com ingredientes selecionados, rica em proteínas, vitaminas e minerais, garante energia, vitalidade e saúde para o seu melhor amigo todos os dias.</td>
+            <td><a href="produtoo1.html">Ver produto</a></td>
         </tr>
         <tr>
             <td>
                 <img src="https://images.unsplash.com/photo-1518715308788-300e1e1e1e1e?auto=format&fit=crop&w=200&q=80" alt="Brinquedo para gatos">
             </td>
             <td>Brinquedo Interativo para Gatos</td>
-            <td>
-                Estimula o instinto de caça e proporciona diversão e exercício para gatos. Fabricado com materiais resistentes, ajuda a combater estresse e tédio.
-            </td>
-            <td>
-                <a href="produtoo2.html">Ver produto</a>
-            </td>
+            <td>Estimula o instinto de caça e proporciona diversão e exercício para gatos de todas as idades. Fabricado com materiais resistentes, ajuda a combater o estresse e o tédio, tornando o dia do seu felino muito mais feliz.</td>
+            <td><a href="produtoo2.html">Ver produto</a></td>
         </tr>
         <tr>
             <td>
                 <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=200&q=80" alt="Shampoo pet">
             </td>
             <td>Shampoo Pet Natural</td>
-            <td>
-                Fórmula suave, hipoalergênica e livre de parabenos, ideal para cães e gatos. Limpa sem agredir a pele, deixando o pelo macio e cheiroso.
-            </td>
-            <td>
-                <a href="produtoo3.html">Ver produto</a>
-            </td>
+            <td>Fórmula suave, hipoalergênica e livre de parabenos, ideal para cães e gatos. Limpa profundamente sem agredir a pele, deixando o pelo macio, brilhante e com um cheirinho agradável após o banho.</td>
+            <td><a href="produtoo3.html">Ver produto</a></td>
         </tr>
         <tr>
             <td>
                 <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=200&q=80" alt="Caminha pet">
             </td>
             <td>Caminha Confortável</td>
-            <td>
-                Proporcione descanso de qualidade! Caminha com enchimento macio, tecido antialérgico e base antiderrapante. Disponível em vários tamanhos.
-            </td>
-            <td>
-                <a href="produtoo4.html">Ver produto</a>
-            </td>
+            <td>Proporcione ao seu pet um descanso de qualidade! Caminha com enchimento macio, tecido antialérgico e base antiderrapante. Disponível em vários tamanhos para cães e gatos, garantindo conforto e segurança.</td>
+            <td><a href="produtoo4.html">Ver produto</a></td>
         </tr>
     </table>
 
-    <p style="text-align:center;">
-        <a href="indexx.html" class="voltar-link">🏠 Voltar para a página inicial</a>
+    <p style="text-align:center; margin-top:20px;">
+        <a href="indexx.html" style="color:#ff1493; font-weight:bold;">⬅ Voltar para a página inicial</a>
     </p>
+</main>
+
+<footer>
+    © 2025 Pet Shop Amigo Fiel — Amor em cada patinha 🐾
+</footer>
 
 </body>
 </html>
