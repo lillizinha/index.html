@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário - Pet Shop Amigo Fiel</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff0f5;
+    color: #5a463a;
+    padding: 0 15px;
+}
+h1 {
+    text-align: center;
+    color: #d81b60;
+    margin: 25px 0;
+}
+form {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    background: #ffe3f8;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #c2185b;
+}
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="number"],
+input[type="url"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: #fff0f5;
+    transition: all 0.3s ease;
+}
+input[type="text"]:focus,
+input[type="search"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="url"]:focus,
+input[type="file"]:focus {
+    border-color: #d81b60;
+    box-shadow: 0 0 5px #ff69b4;
+    outline: none;
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #ff69b4;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+input[type="submit"]:hover {
+    background: #d81b60;
+    transform: translateY(-2px);
+}
+.voltar-link {
+    display: inline-block;
+    text-decoration: none;
+    background: #ffb6c1;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+.voltar-link:hover {
+    background: #ff1493;
+    transform: translateY(-2px);
+}
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+}
+</style>
+</head>
+<body>
+
+<h1>Formulário de Contato 🐾</h1>
+
+<form action="#" method="post" enctype="multipart/form-data">
+    <label for="nome">Nome:</label>
+    <input type="search" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+
+    <label for="idade">Idade:</label>
+    <input type="number" id="idade" name="idade" min="0" max="120" required>
+
+    <label for="lote">Número do Lote:</label>
+    <input type="text" id="lote" name="lote" placeholder="Digite o número do lote">
+
+    <label for="site">Seu site ou rede social:</label>
+    <input type="url" id="site" name="site" placeholder="https://">
+
+    <label for="arquivo">Envie uma foto do seu pet:</label>
+    <input type="file" id="arquivo" name="arquivo" accept="image/*">
+
+    <input type="submit" value="Enviar">
+</form>
+
+<p style="text-align:center;">
+    <a href="indexx.html" class="voltar-link">🏠 Voltar para a página inicial</a>
+</p>
+
+</body>
+</html>
