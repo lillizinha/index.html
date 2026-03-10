@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Web</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 42px;
+        }
+
+        .palavra {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        input {
+            padding: 6px;
+            font-size: 14px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 6px 10px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .calculadora {
+            width: 220px;
+        }
+
+        .linha {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>PROGRAMAÇÃO WEB</h1>
+
+    <div class="palavra">
+        <div class="linha">
+            <label>Digite uma palavra:</label>
+            <input type="text" id="palavraInput">
+            <button onclick="alterarPalavra()">Alterar</button>
+        </div>
+
+        <p>Palavra digitada: <span id="resultadoPalavra">Nenhuma palavra</span></p>
+    </div>
+
+    <div class="calculadora">
+        <h3>Calculadora</h3>
+
+        <div class="linha">
+            <label>Num1:</label>
+            <input type="number" id="num1">
+        </div>
+
+        <div class="linha">
+            <label>Num2:</label>
+            <input type="number" id="num2">
+        </div>
+
+        <button onclick="somar()">Somar</button>
+
+        <p>Resultado: <span id="resultadoSoma">0</span></p>
+    </div>
+
+    <script>
+        function alterarPalavra() {
+            let palavra = document.getElementById("palavraInput").value;
+
+            if (palavra === "") {
+                document.getElementById("resultadoPalavra").innerText = "Nenhuma palavra";
+            } else {
+                document.getElementById("resultadoPalavra").innerText = palavra;
+            }
+        }
+
+        function somar() {
+            let n1 = Number(document.getElementById("num1").value);
+            let n2 = Number(document.getElementById("num2").value);
+
+            let soma = n1 + n2;
+
+            document.getElementById("resultadoSoma").innerText = soma;
+        }
+    </script>
+
+</body>
+</html>
